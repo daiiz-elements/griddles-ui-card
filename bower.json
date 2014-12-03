@@ -1,0 +1,14 @@
+{
+  "name": "griddles-ui-card",
+  "private": true,
+  "dependencies": {
+    "NodeBind": "Polymer/NodeBind#master",
+    "TemplateBinding": "Polymer/TemplateBinding#master",
+    "URL": "Polymer/URL#master",
+    "observe-js": "Polymer/observe-js#master",
+    "polymer-expressions": "Polymer/polymer-expressions#master",
+    "polymer-gestures": "Polymer/polymer-gestures#master",
+    "polymer": "Polymer/polymer#master",
+    "platform": "Polymer/platform#master"
+  }
+}
