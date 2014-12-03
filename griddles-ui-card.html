@@ -12,14 +12,14 @@ This code may only be used under the BSD style.
   <link rel="import" href="griddle-card.html">
 </head>
 <body>
-<polymer-element name="griddles-ui-card"
+<polymer-element name="griddles-ui-card" style="margin: auto;"
                  attributes="query cards wrappedBy layout
                              cardWidth cardMarginBottom streamMarginLeft streamMarginRight streamPaddingTop numberReadAtOnce displayFromTopLeftToBottomRight">
 <template>
    <link rel="stylesheet" type="text/css" href="griddles.css">
    <!--content-->
-   <div class="home-griddles" id="gadget-griddles" on-click="{{cardClicked}}" style="position:relative; left:50%; float:left;">
-      <div id="gadget-streams" style="position:relative; left:-50%; float:left;">
+   <div class="home-griddles" id="gadget-griddles" on-click="{{cardClicked}}" style="position:relative;">
+      <div id="gadget-streams" style="position:relative;">
       </div>
    </div>
    <div class="griddles-working" style="visibility: hidden; position: fixed">
