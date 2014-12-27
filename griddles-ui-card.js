@@ -246,7 +246,7 @@
             var H = photo.height;
             var w = user_settings.card_width;
             var h;
-            if (card_data.height != false && card_data.height > 0 /*&& not_initial_height_false*/) {
+            if (card_data.height != false && card_data.height > 0) {
                 h = card_data.height;
             } else {
                 card_data.init_height = false;
