@@ -246,7 +246,7 @@
             var H = photo.height;
             var w = user_settings.card_width;
             var h;
-            if (card_data.height != false && card_data.height > 0 && not_initial_height_false) {
+            if (card_data.height != false && card_data.height > 0 /*&& not_initial_height_false*/) {
                 h = card_data.height;
             } else {
                 card_data.init_height = false;
@@ -533,7 +533,10 @@
         home.render_stream("gadget-streams");
     }
     home.continue = function() {
-        home.configure_card_design(AppData.int_card_times + 1);
+        home.configure_card_design(AppData.int_card_times + 1); 
+    }
+    home.add_continue = function() {
+        home.configure_card_design(AppData.int_card_times);
     }
     home.onclick = function(e) {}
     home.window_resized_timer = false;
@@ -680,6 +683,14 @@
                             // AppData.int_card_times = AppData.int_card_times -1;
                             // AppData.render_status = ["stop", AppData.int_card_times];
                             console.info(":: RE:: 'restart' is FALSE");
+                            
+                            /* fire scroll-end event */
+                            if (window.griddlesScrollEnd != undefined) {
+                                griddlesScrollEnd(home.apis);
+                            } else {
+                                console.info("The function `griddlesScrollEnd` is undefined.");
+                            }
+                            
                         }
                     }
                 }
@@ -752,6 +763,9 @@
             tag = tag.replace(place_content, rep_content);
           }
           return tag;
+        },
+        render_continue: function() {
+          home.add_continue();
         }
     };
     /*
