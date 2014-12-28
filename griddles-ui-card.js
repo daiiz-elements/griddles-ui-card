@@ -74,7 +74,7 @@
     home.isChromeApp = function() {
         var res = false;
         if(chrome != undefined) {
-           if(chrome.app.window != undefined) {
+           if(chrome.app != undefined && chrome.app.window != undefined) {
              // 「chrome アプリ」である
              res = true;
            }
